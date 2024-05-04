@@ -1,0 +1,69 @@
+main{
+   display: flex;
+   flex-direction: column;
+   width: 100%;
+   background-image: url(../imagens/fundo4.jpg);
+   align-items: center;
+   justify-content: center;
+}
+
+header{
+   display: flex;
+   align-items: center;
+   justify-content: space-between;
+   background-color: rgba(255, 255, 255, 0.8);
+   width: 100%;
+   max-width: 800px;
+   padding: 30px;
+   border-radius: 3px;
+
+}
+.grid {
+    display:grid;
+    grid-template-columns: repeat(6, 135px);
+    gap: 15px;
+    width: 100%;
+    max-width: 800px;
+    margin: 100px auto;
+
+}
+ .card {
+    aspect-ratio: 3/4;
+    width: 100%;
+    background-color: #fff;
+    border-radius: 5px ;
+    position: relative;
+    transition: all 400ms ease;
+    transform-style: preserve-3d;
+ }
+
+ 
+ .front{
+    width: 100%;
+    height: 100%;
+    position: absolute;
+    background-size: cover;
+    border-radius: 5px ;
+    background-position: center;
+    border: 2px solid #333;
+ }
+
+ .back{
+    width: 100%;
+    height: 100%;
+    background-image: url(../imagens/capa2.jpg);
+    background-size: cover;
+    background-position: center;
+    position: absolute;
+    border-radius: 5px ;
+    backface-visibility: hidden;
+ }
+
+ .reveal-card{
+   transform: rotateY(180deg);
+ }
+
+ .disabled-card{
+   filter: saturate(0);
+   opacity: 0.5;
+ }
